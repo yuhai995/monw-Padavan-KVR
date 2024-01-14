@@ -230,6 +230,15 @@ endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_ZEROTIER),y)
 	rm -f $(INSTALLDIR)/www/Advanced_zerotier.asp
 endif
+ifneq ($(CONFIG_FIRMWARE_INCLUDE_smartdns),y)
+	rm -f $(INSTALLDIR)/www/Advanced_smartdns.asp
+endif
+ifneq ($(CONFIG_FIRMWARE_INCLUDE_FRP),y)
+	rm -f $(INSTALLDIR)/www/Advanced_FRP.asp
+endif
+ifneq ($(CONFIG_FIRMWARE_INCLUDE_shadowsocks),y)
+	rm -f $(INSTALLDIR)/www/Advanced_shadowsocks.asp
+endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS), n_n)
 	rm -f $(INSTALLDIR)/www/Advanced_frp.asp
 endif
